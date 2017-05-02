@@ -6,7 +6,7 @@
 #    By: pguillie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/01 11:10:37 by pguillie          #+#    #+#              #
-#    Updated: 2017/04/04 13:29:19 by pguillie         ###   ########.fr        #
+#    Updated: 2017/05/02 13:21:55 by pguillie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -138,7 +138,7 @@ $(NAME) : $(OBJLIBFT) $(OBJGNL) $(OBJPRINTF)
 
 %.o : %.c
 	@ $(CC) $(FLAGS) $(INCLUDES) -o $@ -c $<
-	@ echo "$(BLUE)• $(EOC)$(notdir $(basename $@))$(GREEN) √$(EOC)"
+	@ echo "$(BLUE)• $(EOC)$(notdir $(basename $@))$(GREEN) ✓$(EOC)"
 
 clean :
 	@ rm -rf $(OBJLIBFT) $(OBJGNL) $(OBJPRINTF)
