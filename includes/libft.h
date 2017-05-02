@@ -6,7 +6,7 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:04:11 by pguillie          #+#    #+#             */
-/*   Updated: 2017/04/04 13:29:31 by pguillie         ###   ########.fr       */
+/*   Updated: 2017/05/02 13:18:04 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ char				*ft_strmapi(char const *str, char (*f)(unsigned int, char));
 char				*ft_strnewchr(size_t size, char c);
 char				*ft_randstr(size_t n);
 char				**ft_strsplit(char const *str, char c);
-void				ft_strtabdel(char **tab);
+void				ft_strtabdel(char **t);
 
 /*
 ** Case
