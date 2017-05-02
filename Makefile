@@ -6,7 +6,7 @@
 #    By: pguillie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/01 11:10:37 by pguillie          #+#    #+#              #
-#    Updated: 2017/05/02 13:21:55 by pguillie         ###   ########.fr        #
+#    Updated: 2017/05/02 15:38:58 by pguillie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCLIBFT	= $(addprefix libft/,\
 			  ft_atoi_base.c\
 			  ft_atoi.c\
 			  ft_bzero.c\
+			  ft_error.c\
 			  ft_indexchr.c\
 			  ft_intlen.c\
 			  ft_inttabnew.c\

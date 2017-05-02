@@ -6,7 +6,7 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:04:11 by pguillie          #+#    #+#             */
-/*   Updated: 2017/05/02 13:18:04 by pguillie         ###   ########.fr       */
+/*   Updated: 2017/05/02 15:40:29 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+int					ft_error(char *msg, ...);
 
 /*
 ** Memory
