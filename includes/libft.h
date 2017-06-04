@@ -6,7 +6,7 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 16:04:11 by pguillie          #+#    #+#             */
-/*   Updated: 2017/05/02 15:40:29 by pguillie         ###   ########.fr       */
+/*   Updated: 2017/05/23 17:37:14 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-int					ft_error(char *msg, ...);
+int					ft_error(char *m, char *s, char *g);
 
 /*
 ** Memory
@@ -146,6 +146,7 @@ int					ft_atoi_base(const char *str, int base);
 char				*ft_itoa(int n);
 char				*ft_ntoa_base(long long n, int base);
 char				*ft_untoa_base(unsigned long long n, int base);
+long				key_input(void);
 
 /*
 ** List

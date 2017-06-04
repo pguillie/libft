@@ -93,6 +93,7 @@ SRCLIBFT	= $(addprefix libft/,\
 			  ft_toupper.c\
 			  ft_unblen_base.c\
 			  ft_untoa_base.c\
+			  key_input.c\
 			  )
 
 SRCGNL		= $(addprefix get_next_line/,\
