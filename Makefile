@@ -1,153 +1,94 @@
-# **************************************************************************** #
+#******************************************************************************#
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pguillie <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: pguillie <pguillie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/12/01 11:10:37 by pguillie          #+#    #+#              #
-#    Updated: 2017/05/02 15:38:58 by pguillie         ###   ########.fr        #
+#    Created: 2019/05/22 04:54:10 by pguillie          #+#    #+#              #
+#    Updated: 2019/08/02 05:14:23 by pguillie         ###   ########.fr        #
 #                                                                              #
-# **************************************************************************** #
+#******************************************************************************#
 
-NAME		= libft.a
-CC			= gcc
-FLAGS		= -Wall -Werror -Wextra
-INCLUDES	= -I includes/
+NAME	:= libft.a
+CC	:= gcc
+AS	:= nasm
+AR	:= ar
 
-SRCLIBFT	= $(addprefix libft/,\
-			  ft_atoi_base.c\
-			  ft_atoi.c\
-			  ft_bzero.c\
-			  ft_error.c\
-			  ft_indexchr.c\
-			  ft_intlen.c\
-			  ft_inttabnew.c\
-			  ft_isalnum.c\
-			  ft_isalpha.c\
-			  ft_isascii.c\
-			  ft_isdigit.c\
-			  ft_isprint.c\
-			  ft_isspace.c\
-			  ft_itoa.c\
-			  ft_lstadd.c\
-			  ft_lstdel.c\
-			  ft_lstdelone.c\
-			  ft_lstiter.c\
-			  ft_lstmap.c\
-			  ft_lstnew.c\
-			  ft_memalloc.c\
-			  ft_memccpy.c\
-			  ft_memchr.c\
-			  ft_memcmp.c\
-			  ft_memcpy.c\
-			  ft_memdel.c\
-			  ft_memmove.c\
-			  ft_memset.c\
-			  ft_nblen_base.c\
-			  ft_ntoa_base.c\
-			  ft_putchar.c\
-			  ft_putchar_fd.c\
-			  ft_putendl.c\
-			  ft_putendl_fd.c\
-			  ft_putnbr.c\
-			  ft_putnbr_fd.c\
-			  ft_putstr.c\
-			  ft_putstr_fd.c\
-			  ft_randstr.c\
-			  ft_sqrt.c\
-			  ft_strcat.c\
-			  ft_strchr.c\
-			  ft_strcjoin.c\
-			  ft_strclr.c\
-			  ft_strcmp.c\
-			  ft_strcpy.c\
-			  ft_strdel.c\
-			  ft_strdup.c\
-			  ft_strequ.c\
-			  ft_striter.c\
-			  ft_striteri.c\
-			  ft_strjoin.c\
-			  ft_strlcat.c\
-			  ft_strlen.c\
-			  ft_strlower.c\
-			  ft_strmap.c\
-			  ft_strmapi.c\
-			  ft_strncat.c\
-			  ft_strncmp.c\
-			  ft_strncpy.c\
-			  ft_strndup.c\
-			  ft_strnequ.c\
-			  ft_strnew.c\
-			  ft_strnewchr.c\
-			  ft_strnstr.c\
-			  ft_strpaste.c\
-			  ft_strrchr.c\
-			  ft_strsplit.c\
-			  ft_strstr.c\
-			  ft_strsub.c\
-			  ft_strtabdel.c\
-			  ft_strtrim.c\
-			  ft_strupper.c\
-			  ft_tolower.c\
-			  ft_toupper.c\
-			  ft_unblen_base.c\
-			  ft_untoa_base.c\
-			  key_input.c\
-			  )
+CFLAGS	= -Wall -Werror -Wextra -I$(incdir)
+ASFLAGS	= -f$(arch)
+ARFLAGS	= cr
 
-SRCGNL		= $(addprefix get_next_line/,\
-				get_next_line.c\
-				)
+os != uname
+ifeq ($(os), Linux)
+	arch := elf64
+	ARFLAGS += -U
+else
+	arch := macho64
+	ASFLAGS += --prefix _
+endif
 
-SRCPRINTF	= $(addprefix ft_printf/,\
-			  check.c\
-			  ft_bin.c\
-			  ft_char.c\
-			  ft_color.c\
-			  ft_conversion.c\
-			  ft_create_list.c\
-			  ft_disp.c\
-			  ft_fill_list.c\
-			  ft_hexa.c\
-			  ft_notype.c\
-			  ft_octal.c\
-			  ft_percent.c\
-			  ft_printf.c\
-			  ft_ptr.c\
-			  ft_sigint.c\
-			  ft_string.c\
-			  ft_unsint.c\
-			  ft_wstruct.c\
-			  )
+incdir := ./include/
+srcdir := ./src/
 
-OBJLIBFT	= $(SRCLIBFT:.c=.o)
-OBJGNL		= $(SRCGNL:.c=.o)
-OBJPRINTF	= $(SRCPRINTF:.c=.o)
+hdr = libft.h libfts.h ft_ctype.h
 
-RED		= \033[31;01m
-GREEN	= \033[32;01m
-BLUE	= \033[34;01m
-WHITE	= \033[37;01m
-EOC		= \033[0m
+obj = $(addprefix $(srcdir),			\
+	$(addprefix ctype/,			\
+		ft_ctype.o			\
+		ft_isalnum.o			\
+		ft_isalpha.o			\
+		ft_isascii.o			\
+		ft_isblank.o			\
+		ft_iscntrl.o			\
+		ft_isdigit.o			\
+		ft_isgraph.o			\
+		ft_islower.o			\
+		ft_isprint.o			\
+		ft_ispunct.o			\
+		ft_isspace.o			\
+		ft_isupper.o			\
+		ft_isxdigit.o			\
+	)					\
+	ft_atoi.o				\
+	ft_bzero.o				\
+	ft_cat.o				\
+	ft_memchr.o				\
+	ft_memcmp.o				\
+	ft_memcpy.o				\
+	ft_memmem.o				\
+	ft_memmove.o				\
+	ft_memset.o				\
+	ft_putchar.o				\
+	ft_puts.o				\
+	ft_strcat.o				\
+	ft_strchr.o				\
+	ft_strcmp.o				\
+	ft_strdup.o				\
+	ft_strlen.o				\
+	ft_strndup.o				\
+	ft_strtok.o				\
+	ft_tolower.o				\
+	ft_toupper.o				\
+	read_line.o				\
+)
 
-all : $(NAME)
+# rules
 
-$(NAME) : $(OBJLIBFT) $(OBJGNL) $(OBJPRINTF)
-	@ ar rc $@ $^
-	@ ranlib $@
-	@ echo "\n$(GREEN)$@ successfully created !$(EOC)\n"
+.PHONY: all clean fclean re
+.SECONDARY: $(obj)
 
-%.o : %.c
-	@ $(CC) $(FLAGS) $(INCLUDES) -o $@ -c $<
-	@ echo "$(BLUE)• $(EOC)$(notdir $(basename $@))$(GREEN) ✓$(EOC)"
+all: $(NAME)
 
-clean :
-	@ rm -rf $(OBJLIBFT) $(OBJGNL) $(OBJPRINTF)
-	@ echo "$(RED)$(basename $(NAME)) object files deleted$(EOC)\n" 
+$(NAME): $(NAME)($(obj))
+	ranlib $@
 
-fclean : clean
-	@ rm -rf $(NAME)
-	@ echo "$(RED)$(NAME) deleted$(EOC)\n"
+$(obj): $(addprefix $(incdir), $(hdr))
 
-re : fclean all
+clean:
+	$(RM) $(obj)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
