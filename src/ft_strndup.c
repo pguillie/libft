@@ -6,10 +6,11 @@
 /*   By: pguillie <pguillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 08:46:28 by pguillie          #+#    #+#             */
-/*   Updated: 2019/05/27 08:46:28 by pguillie         ###   ########.fr       */
+/*   Updated: 2019/09/12 07:50:55 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char *ft_strndup(const char *s, size_t n)

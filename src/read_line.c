@@ -6,11 +6,14 @@
 /*   By: pguillie <pguillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 19:32:32 by pguillie          #+#    #+#             */
-/*   Updated: 2019/07/30 08:19:52 by pguillie         ###   ########.fr       */
+/*   Updated: 2019/09/12 07:54:27 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+#include <stdlib.h>
 #include <limits.h>
+
 #ifndef OPEN_MAX
 # define OPEN_MAX 256
 #endif

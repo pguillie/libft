@@ -6,7 +6,7 @@
 #    By: pguillie <pguillie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 04:54:10 by pguillie          #+#    #+#              #
-#    Updated: 2019/08/02 05:14:23 by pguillie         ###   ########.fr        #
+#    Updated: 2019/09/12 07:54:43 by pguillie         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -31,7 +31,7 @@ endif
 incdir := ./include/
 srcdir := ./src/
 
-hdr = libft.h libfts.h ft_ctype.h
+hdr = libft.h
 
 obj = $(addprefix $(srcdir),			\
 	$(addprefix ctype/,			\
@@ -52,7 +52,6 @@ obj = $(addprefix $(srcdir),			\
 	)					\
 	ft_atoi.o				\
 	ft_bzero.o				\
-	ft_cat.o				\
 	ft_memchr.o				\
 	ft_memcmp.o				\
 	ft_memcpy.o				\

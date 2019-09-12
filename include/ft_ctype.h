@@ -6,7 +6,7 @@
 /*   By: pguillie <pguillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 09:22:32 by pguillie          #+#    #+#             */
-/*   Updated: 2019/02/13 22:13:13 by pguillie         ###   ########.fr       */
+/*   Updated: 2019/09/12 07:27:54 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ int ft_ispunct(int c);
 int ft_isspace(int c);
 int ft_isupper(int c);
 int ft_isxdigit(int c);
+
+int ft_toupper(int c);
+int ft_tolower(int c);
 
 /*
  * Private
