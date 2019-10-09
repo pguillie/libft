@@ -6,7 +6,7 @@
 /*   By: pguillie <pguillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 07:25:44 by pguillie          #+#    #+#             */
-/*   Updated: 2019/09/12 07:47:03 by pguillie         ###   ########.fr       */
+/*   Updated: 2019/10/06 17:28:43 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char *ft_strchr(const char *s, int c);
 int ft_strcmp(const char *s1, const char *s2);
 char *ft_strdup(const char *s);
 size_t ft_strlen(const char *s);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strndup(const char *s, size_t n);
 char *ft_strtok(char *str, const char *delim);
 
