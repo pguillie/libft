@@ -6,7 +6,7 @@
 #    By: pguillie <pguillie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 04:54:10 by pguillie          #+#    #+#              #
-#    Updated: 2019/10/06 17:18:35 by pguillie         ###   ########.fr        #
+#    Updated: 2019/10/31 18:02:40 by pguillie         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -63,6 +63,7 @@ obj = $(addprefix $(srcdir),			\
 	ft_strcat.o				\
 	ft_strchr.o				\
 	ft_strcmp.o				\
+	ft_strcpy.o				\
 	ft_strdup.o				\
 	ft_strlen.o				\
 	ft_strncmp.o				\
