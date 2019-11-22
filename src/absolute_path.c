@@ -6,7 +6,7 @@
 /*   By: pguillie <pguillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/06 16:12:50 by pguillie          #+#    #+#             */
-/*   Updated: 2019/10/09 21:10:04 by pguillie         ###   ########.fr       */
+/*   Updated: 2019/11/22 08:32:52 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ char *absolute_path(const char *path, char *resolved_path)
 		}
 		path += j;
 	}
-	resolved_path[i] = '\0';
+	resolved_path[(i > 1) ? i - 1 : i] = '\0';
 	return resolved_path;
 }
