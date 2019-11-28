@@ -6,7 +6,7 @@
 /*   By: pguillie <pguillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/24 19:32:32 by pguillie          #+#    #+#             */
-/*   Updated: 2019/09/12 07:54:27 by pguillie         ###   ########.fr       */
+/*   Updated: 2019/11/28 12:36:04 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int read_line(int fd, char **line)
 	if (!line || fd < 0 || !(fd < OPEN_MAX))
 		return (-1);
 	c = sizeof(buf);
+	nl = NULL;
 	while ((!s[fd] || (nl = ft_strchr(s[fd], '\n')) == NULL)
 		&& c == sizeof(buf)) {
 		ft_memset(buf, 0, sizeof(buf));
